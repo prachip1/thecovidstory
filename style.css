@@ -1,0 +1,420 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #d485f8;
+  }
+  
+  .container {
+    max-width: 900px;
+  }
+  
+  a {
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+ 
+  input::placeholder{
+	  color:#b4adad;
+	  font-size:13px;
+	  letter-spacing:1px;
+	  font-size: 12px;
+      font-weight: 400;
+      font-family: "Montserrat", sans-serif;
+ 
+	  
+  }
+  h1 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    font-weight: 700;
+  }
+  
+  section#formHolder {
+    padding: 50px 0;
+  }
+  
+  .brand {
+    padding: 20px;
+    background: url(background1.jpg);
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    min-height: 540px;
+    position: relative;
+    box-shadow: 3px 3px 10px rgba(212, 210, 210, 0.3);
+    transition: all 0.6s cubic-bezier(1, -0.375, 0.285, 0.995);
+    z-index: 9999;
+  }
+  .brand.active {
+    width: 100%;
+  }
+  .brand::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: -1;
+  }
+  .brand .heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    transition: all 0.6s;
+  }
+  .brand .heading.active {
+    top: 100px;
+    left: 100px;
+    transform: translate(0);
+  }
+  .brand .heading h2 {
+    font-size: 60px;
+    word-wrap: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+  .brand .heading p {
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: 4px;
+    font-family: "Raleway", sans-serif;
+  }
+  
+ 
+   .form-peice {
+    background: #fff;
+    min-height: 540px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    color: #bbbbbb;
+    padding: 30px 0 60px;
+    transition: all 0.9s cubic-bezier(1, -0.375, 0.285, 0.995);
+    position: absolute;
+    top: 0;
+    left: -30%;
+    width: 130%;
+    overflow: hidden;
+  }
+   .form-peice.switched {
+    transform: translateX(-100%);
+    width: 100%;
+    left: 0;
+  }
+form {
+    padding: 0 40px;
+    margin: 0;
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+ form .form-group {
+    margin-bottom: 5px;
+    position: relative;
+  }
+ 
+  form label {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    transform: translateY(40px);
+    transition: all 0.4s;
+    cursor: text;
+    z-index: -1;
+  }
+   form label.active {
+    transform: translateY(10px);
+    font-size: 10px;
+  }
+ form label.fontSwitch {
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 600;
+  }
+   .form-group input:not([type=submit]) {
+    background: none;
+    outline: none;
+    border: none;
+    display: block;
+    padding: 18px 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    color: #444;
+    font-size: 15px;
+    font-family: "Montserrat", sans-serif;
+    z-index: 1;
+  }
+   
+ 
+  .form-group input[type=password] {
+    color: #f95959;
+  }
+
+  .form-group.success input{
+    border-bottom: 1px solid #2ecc71;
+    
+
+  }
+
+  .form-group.error input{
+    border-bottom: 1px solid #f95959;
+   
+  }
+   .form-group small{
+    
+    position: absolute;
+    bottom:0;
+    left:0;
+    color:#f95959;
+    visibility: hidden;
+    
+  }
+ 
+  .form-group.error small{
+    visibility: visible;
+   
+  }
+
+
+
+
+   form .signup {
+    margin-top: 30px;
+    margin-left:5.78em;
+  }
+   form .signup input {
+    font-size: 13px;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    background: #8b07c9;
+    color: #fff;
+    border-radius: 30px;
+    margin-right: 20px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    transition: background 1s ease-out;
+  }
+  form .signup input:hover {
+   /* background: #d485f8; */
+   background: white;
+   color:#8b07c9;
+   font-weight: 600;
+  
+    
+  }
+ form .signup a.switch {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    color: #bbbbbb;
+    text-decoration: underline;
+    transition: all 0.3s;
+  }
+  .form form .signup a.switch:hover {
+    color: #f95959;
+  }
+  .form button{
+    background-color: #8b07c9;
+    border:2px solid #8b07c9;
+    border-radius:4px;
+    display: block;
+    font-size: 14px;
+    padding:10px;
+    border-radius:10px;
+    color: #fff;
+    margin-right: 20px;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    margin-top: -3px;
+    transition:background 1s ease-out;
+    
+
+  }
+  .form button:hover{
+    background:white;
+    color:#8b07c9;
+    border:2px solid #8b07c9;
+    
+  }
+ 
+  .form .btnofolduser button{ 
+    border:none!important;
+    background: #fff!important;
+
+
+  }
+  .form .btnofolduser button a{
+    color:#8b07c9!important;
+    font-weight: 700;
+    transition:background 1s ease-out;
+   
+   
+  }
+  .form .btnnewuser button{ 
+    border:none!important;
+    background: #fff!important;
+
+
+  }
+  .form .btnnewuser button a{
+    color:#8b07c9!important;
+    font-weight: 700;
+    transition:background 1s ease-out;
+   
+   
+  }
+
+  .form button a:hover{
+    padding: 10px 30px;
+    background: #8b07c9;
+    color: #fff!important;
+    border-radius: 4px;
+    border: none;
+    text-decoration: none;
+    margin-top: -20px;
+  }
+  .form .newuser, .olduser{
+    display: flex;
+    justify-content: center;
+    margin-top:40px;
+  }
+  .form .olduser p{
+    text-align: center;
+    color:#001111;
+  }
+  form .newuser p{
+    text-align: center;
+    color:#001111;
+  }
+  .form .newuser .pnewuser{
+    margin-top: 5px;
+    padding-right: 8px;
+  }
+
+  .form .olduser .pofolduser{
+    margin-top: 5px;
+    padding-right: 8px;
+  }
+
+
+
+
+
+
+
+
+  footer {
+    text-align: center;
+  }
+  footer p {
+    color: #777;
+  }
+  footer p a, footer p a:focus {
+    color: #b8b09f;
+    transition: all 0.3s;
+    text-decoration: none !important;
+  }
+  footer p a:hover, footer p a:focus:hover {
+    color: #f95959;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      overflow: hidden;
+    }
+  
+    section#formHolder {
+      padding: 0;
+    }
+    section#formHolder div.brand {
+      min-height: 200px !important;
+    }
+    section#formHolder div.brand.active {
+      min-height: 100vh !important;
+    }
+    section#formHolder div.brand .heading.active {
+      top: 200px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    section#formHolder div.brand .success-msg p {
+      font-size: 16px;
+    }
+    section#formHolder div.brand .success-msg a {
+      padding: 5px 30px;
+      font-size: 10px;
+    }
+    section#formHolder .form {
+      width: 80vw;
+      min-height: 500px;
+      margin-left: 10vw;
+    }
+    section#formHolder .form .form-peice {
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      transition: all 0.5s ease-in-out;
+    }
+    section#formHolder .form .form-peice.switched {
+      transform: translateY(-100%);
+      width: 100%;
+      left: 0;
+    }
+    section#formHolder .form .form-peice > form {
+      width: 100% !important;
+      padding: 60px;
+      left: 50%;
+    }
+  }
+  @media (max-width: 480px) {
+    section#formHolder .form {
+      width: 100vw;
+      margin-left: 0;
+    }
+    section form #submit{
+      margin-left:-3rem;
+    }
+    form .pofolduser p {
+      font-size:12px!important;
+      padding:0px;
+    }
+    form .btnofolduser button{
+      margin-top:-13px!important;
+    }
+    form .btnofolduser a{
+      font-size:12px!important;
+      padding:8px 12px!important;
+    }
+
+    
+    form .pnewuser p {
+      font-size:12px!important;
+      padding:0px;
+    }
+    form .btnnewuser button{
+      margin-top:-13px!important;
+    }
+    form .btnnewuser a{
+      font-size:12px!important;
+      padding:8px 12px!important;
+    }
+
+
+
+
+
+    h2 {
+      font-size: 50px !important;
+    }
+  }
+  
